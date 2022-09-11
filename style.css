@@ -1,0 +1,192 @@
+.container-all{
+    display: flex;
+}
+#sidebar{
+    width: 250px;
+    height: 1500px;
+    background-color: rgba(222, 179, 183, 0.693);
+    transition: 1s;/* 展開收合的動畫 */
+}
+#sidebar.active{
+    margin-left:-200px;
+    /* 就會留50px的位置放小圖示 */
+}
+.container-right{
+    background-color: rgb(234, 230, 225);
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+}
+.collapse-btn{
+    position: relative;/* 相對位置:展開收合才會一起移動 */
+    top: 1%;
+    left: 210px;
+    background-color: rgba(222, 179, 183, 0.693);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+.collapse-btn:hover{
+    background-color:rgba(222, 179, 183, 0.693);
+    transition: 0.4s;
+}
+#sidebar p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: initial;
+    padding: 10px;
+}
+#sidebar ul li a{
+    padding: 10px;
+    margin-top: 8px;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+#sidebar ul li a:hover{
+    color: rgba(222, 179, 183, 0.693);
+    background: #fff;
+}
+.fa-align-left,.fa-house-chimney,
+.fa-comment-medical,.fa-hand-holding-heart,
+.fa-map-location-dot
+{
+    float: right;
+}
+/* 作伙來捐血 */
+.logo{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    background-color:rgba(254, 173, 173, 0.746);
+    border-radius: 15px;
+    box-shadow: 3px 9px #ccc;
+    font-weight: bolder;
+    border: 3px double rgb(255, 104, 44);
+    text-shadow: 
+    0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbbbbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaaaaa;
+}
+.logo:hover{
+    background-color:rgba(243, 158, 158, 0.645);
+    cursor: pointer;
+}
+video{
+    border: 15px double rgb(165, 163, 159);
+    box-shadow: 3px 9px #ccc;
+}
+/* 最新消息 */
+.item{
+    font-size: 30px;
+    border: 3px solid rgb(252, 234, 181);
+    color: #fff;
+    background-color:rgb(227, 149, 46);
+    margin: 10px;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+/* 公告 */
+.bg{
+    background-color: rgb(124, 164, 108);
+    border: 5px solid rgb(212, 156, 59);
+    border-bottom: 10px solid rgb(212, 156, 59);
+}
+.img{
+    width: 100%;
+    border-top: 3px solid rgb(134, 134, 134);
+    border-bottom: 3px solid rgb(134, 134, 134);
+    border-radius: 10px;
+}
+.img:hover{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(131, 131, 131);
+    opacity: 0.8;
+}
+/* place */
+.place-logo{
+    margin-left: 10px;
+}
+.bg1{
+    background-color: rgb(237, 237, 237);
+    padding: 10px;
+}
+.btn-search{
+    background-color:rgb(135, 135, 135);
+    border: 3px solid rgb(102, 102, 102);
+    font-weight: bolder;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+.btn-search:hover{
+    background-color: rgb(163, 163, 163);
+}
+.c-title{
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    background-color: rgb(145, 145, 145);
+    border-radius: 10px;
+}
+.c-text{
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+.btn-go{
+    background-color: rgb(227, 127, 127);
+    border: 3px solid rgb(255, 255, 255);
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 22px;
+    padding: 5px;
+}
+.btn-go:hover{
+    background-color: rgb(224, 74, 74);
+    text-decoration: none;
+    color: #fff;
+    border: 3px solid rgb(255, 255, 255);
+}
+/* info */
+.title{
+    color: rgb(1, 1, 1);
+    font-size: 30px;
+    font-weight: bolder;
+    border-left:5px solid rgb(219, 68, 68) ;
+    background-color: rgb(230, 199, 199);
+}
+.text{
+    border-left:5px solid rgb(219, 68, 68) ;
+    background-color: rgb(230, 199, 199);
+    color: rgb(49, 49, 49);
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+}
+/* 響應式網站的程式 */
+@media(max-width:600px){
+    #sidebar{
+        margin-left: -100px;
+        width: 150px;
+        font-size: 20px
+    }
+    .collapse-btn{
+        position: relative;
+        top: 1%;
+        left: 110px;
+    }
+    #sidebar.active{
+        margin-left: 0px;
+    }
+    #sidebar ul p {
+        font-size: 18px;
+        text-align: left;
+    }
+}
+

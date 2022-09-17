@@ -135,7 +135,6 @@ var data =[
         "map":"https://goo.gl/maps/j1TDyVXNnFTQqoPb6",
         "作業時間": "每月11日 09:30~16:00"
     },
-    // 固定捐血室
     {
         "地區":"西區",
         "巡迴捐血點":"三民捐血室(可做分離式捐血)",
@@ -195,8 +194,6 @@ var data =[
 ]
 var len = data.length;
 var result=document.getElementById("result");
-var a=document.getElementsByTagName("href");
-var src=document.getElementsByTagName("src");
 document.getElementById('btn2').onclick=function(){
     result.innerHTML = '';
 
@@ -204,22 +201,20 @@ document.getElementById('btn2').onclick=function(){
     var selected= [...select.selectedOptions]
     .map(option => option.value);
     for(var i=0; len>i;i++){
-        
-
         if(selected==data[i].地區){
             result.innerHTML+=
             `<div class="col-md-6 mx-auto bg1">
-                <div class="card text-center">
+                <div class="card">
                     <img src='${data[i].img}' class="card-img-top">
-                        <div class="card-body">
-                            <h4 class="card-title c-title">${data[i].巡迴捐血點}</h4>
-                        </div>
-                        <li class="list-group-item"><p class="c-text"><i class="fa-solid fa-location-dot"></i>${data[i].地址}</p></li>
-                        <li class="list-group-item "><p class="c-text"><i class="fa-solid fa-clock"></i>${data[i].作業時間}</p></li>
-                        <a href="${data[i].map}" class="btn-go" target="_blank">GO!</a>
+                    <div class="card-body">
+                        <h4 class="card-title c-title">${data[i].巡迴捐血點}</h4>
+                    </div>
+                    <li class="list-group-item"><p class="c-text"><i class="fa-solid fa-location-dot"></i>${data[i].地址}</p></li>
+                    <li class="list-group-item "><p class="c-text"><i class="fa-solid fa-clock"></i>${data[i].作業時間}</p></li>
+                    <a href="${data[i].map}" class="btn-go" target="_blank">GO!</a>
                 </div>
             </div>
-            `;
+            `
             
         }
     }
